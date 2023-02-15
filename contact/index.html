@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <!-- META -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <!-- PAGE TITLE -->
+    <title>CC Biochar</title>
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png" />
+
+    <!-- GOOGLE FONTS -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/plugins.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/elements.css" />
+  </head>
+
+  <body>
+    <!-- LOADING SCREEN -->
+    <div class="loading-screen">
+      <div class="line-frame"><div class="line"></div></div>
+      <p>Loading...</p>
+    </div>
+    <!-- /LOADING SCREEN -->
+
+    <!-- MAIN -->
+    <div id="main" class="not-loaded">
+      <a href="#" class="ui-name"
+        >
+        <p><img src="../Logo.png" alt="logo" class="head-logo"></p></a>
+
+        <div class="section" data-section-name="Contact">
+          <!-- SECTION CONTAINER -->
+          <div class="section-container">
+            <!-- CONTAINER CENTER Y -->
+            <div class="container-center-y">
+              <!-- CONTAINER -->
+              <div class="container">
+                <!-- ROW -->
+                <div
+                  class="row text-center justify-content-center align-items-center"
+                >
+                  <!-- COLUMN -->
+                  <div class="col-10 col-md-7">
+                    <p
+                      class="content-animate name-tag m-b-2"
+                      data-delay="0.6"
+                      data-duration="0.6"
+                      data-ease="power2.out"
+                      data-animation-type="fade_in"
+                    >
+                      Contact
+                    </p>
+  
+                    <h3
+                      class="content-animate"
+                      data-delay="0"
+                      data-duration="0.6"
+                      data-ease="power2.out"
+                      data-animation-type="fade_in_from_right"
+                    >
+                      <span class="fst-italic">Let's </span
+                      ><span class="public-sans">get in touch.</span>
+                    </h3>
+  
+                    <p
+                      class="content-animate m-t-2"
+                      data-delay="0.2"
+                      data-duration="0.6"
+                      data-ease="power2.out"
+                      data-animation-type="fade_in_from_right"
+                    >
+                      Fill out my form below and send me an email.
+                    </p>
+  
+                    <!-- FORM -->
+                    <form
+                      id="contact-form"
+                      class="m-t-2"
+                      action="assets/contact.php"
+                      method="post"
+                      autocomplete="off"
+                    >
+                      <!-- ROW -->
+                      <div class="row text-left justify-content-between">
+                        <!-- COLUMN -->
+                        <div
+                          class="col-12 col-sm-6 content-animate"
+                          data-delay="0.3"
+                          data-duration="0.6"
+                          data-ease="power2.out"
+                          data-animation-type="fade_in_from_left"
+                        >
+                          <input
+                            type="text"
+                            id="contact-form-name"
+                            class="form-control"
+                            name="name"
+                            placeholder="* Name"
+                          />
+                          <input
+                            type="text"
+                            id="contact-form-email"
+                            class="form-control m-t-4"
+                            name="email"
+                            placeholder="* Email"
+                          />
+                        </div>
+                        <!-- /COLUMN -->
+  
+                        <!-- COLUMN -->
+                        <div
+                          class="col-12 col-sm-5 m-t-4 m-t-sm-0 content-animate"
+                          data-delay="0.35"
+                          data-duration="0.6"
+                          data-ease="power2.out"
+                          data-animation-type="fade_in_from_right"
+                        >
+                          <input
+                            data-require-filling="false"
+                            type="text"
+                            id="contact-form-company"
+                            class="form-control"
+                            name="company"
+                            placeholder="Company"
+                          />
+                          <input
+                            data-require-filling="false"
+                            type="text"
+                            id="contact-form-phone"
+                            class="form-control m-t-4"
+                            name="phone"
+                            placeholder="Phone"
+                          />
+                        </div>
+                        <!-- /COLUMN -->
+  
+                        <!-- COLUMN -->
+                        <div
+                          class="col-12 m-t-4 content-animate"
+                          data-delay="0.4"
+                          data-duration="0.6"
+                          data-ease="power2.out"
+                          data-animation-type="fade_in_from_bottom"
+                        >
+                          <!--  HONEYPOT CAPTCHA - FOR SPAM PROTECTION - DO NOT REMOVE THE COUNTRY FIELD -->
+                          <div class="hpc">
+                            <input
+                              type="text"
+                              id="contact-form-country"
+                              class="form-control"
+                              name="taxid"
+                              placeholder="* Tax ID"
+                            />
+                          </div>
+                          <!--  / HONEYPOT CAPTCHA - FOR SPAM PROTECTION - DO NOT REMOVE THE COUNTRY FIELD -->
+  
+                          <textarea
+                            id="contact-form-message"
+                            class="form-control"
+                            name="message"
+                            placeholder="* Message"
+                          ></textarea>
+                        </div>
+                        <!-- /COLUMN -->
+  
+                        <!-- COLUMN -->
+                        <div
+                          class="col-12 m-t-3 d-flex justify-content-end content-animate"
+                          data-delay="0.45"
+                          data-duration="0.6"
+                          data-ease="power2.out"
+                          data-animation-type="fade_in_from_bottom"
+                        >
+                          <button
+                            type="submit"
+                            class="d-flex align-items-center m-t-2"
+                          >
+                            <span class="button-text">Submit</span
+                            ><span class="icon-button m-l-2">
+                              <span class="ti-angle-right"></span>
+                            </span>
+                          </button>
+                        </div>
+                        <!-- /COLUMN -->
+                      </div>
+                      <!-- /ROW -->
+                    </form>
+                    <!-- /FORM-->
+                  </div>
+                  <!-- /COLUMN -->
+                </div>
+                <!-- /ROW -->
+              </div>
+              <!-- /CONTAINER -->
+            </div>
+            <!-- /CONTAINER CENTER Y -->
+          </div>
+          <!-- /SECTION CONTAINER -->
+        </div>
+    </div>
+    <!-- MAIN -->
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="../assets/js/plugins.js"></script>
+    <script src="../config.js"></script>
+    <script src="../assets/js/scripts.js"></script>
+    <script src="../assets/js/backgound.js"></script>
+  </body>
+</html>
