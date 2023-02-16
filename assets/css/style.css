@@ -118,6 +118,7 @@ h6
 .spectral
 {
     font-family: 'D-DIN'!important;
+    color: #fff;
 }
 
 h1
@@ -1886,6 +1887,9 @@ canvas
     .about-name{
         visibility: hidden;
       }
+      p{
+        font-size: 2rem !important;
+      }
 }
 @media only screen 
   and (min-device-width: 500px) 
@@ -1906,3 +1910,29 @@ canvas
         visibility: hidden;
       }
 }
+/* .info-box {
+    height: 26vh;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+  } */
+  .info {
+    user-select: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .info .line {
+    height: 2px;
+    width: 10rem;
+    background: #fff;
+    vertical-align: middle;
+    margin: 0 2rem;
+    display: inline-block;
+  }
+  .info p {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+  }

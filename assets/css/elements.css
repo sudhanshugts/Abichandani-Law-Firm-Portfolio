@@ -130,7 +130,6 @@ form.success .icon-button
 {
     opacity: 1;
 }
-
 .hover-reveal 
 {
     position: absolute;
@@ -317,4 +316,13 @@ form.success .icon-button
         width: 60vw;
         height: 80vw;
     }
+    .work-grid .item
+{
+    position: relative;
+    margin: 0 4rem;
+    opacity: 100;
+    -webkit-transition: .2s ease;
+    -o-transition: .2s ease;
+    transition: .2s ease;
+}
 }
