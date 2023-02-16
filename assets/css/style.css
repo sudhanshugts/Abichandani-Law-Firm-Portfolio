@@ -1553,7 +1553,7 @@ canvas
     letter-spacing: -0.01em !important;
     font-weight: 400 !important;
     margin-bottom: 0 !important;
-    margin-top: 13rem;
+    margin-top: 9rem !important;
     padding-bottom: 13rem;
 
 }
@@ -1844,6 +1844,18 @@ canvas
         font-size: 5rem;
 
     }
+    #director
+    {
+        text-align: center;
+    }
+    #about
+    {
+        margin-top: 60%;
+    }
+    .about-name{
+        visibility: hidden;
+      }
+
 }
 @media only screen 
   and (min-device-width: 280px) 
@@ -1859,6 +1871,21 @@ canvas
         font-size: 4rem;
 
     }
+    p
+    {
+        font-size: 2rem;
+    }
+  #director
+    {
+        text-align: center;
+    }
+    #about
+    {
+        margin-top: 60%;
+    }
+    .about-name{
+        visibility: hidden;
+      }
 }
 @media only screen 
   and (min-device-width: 500px) 
@@ -1867,4 +1894,15 @@ canvas
     h1{
         font-size: 5rem;
     }
+    #director
+    {
+        text-align: center;
+    }
+    #about
+    {
+        margin-top: 60%;
+    }
+    .about-name{
+        visibility: hidden;
+      }
 }
