@@ -2205,6 +2205,9 @@ canvas {
   .about-note {
     margin-top: 5rem;
   }
+  .usp-container{
+    padding-block-start: 9rem !important;
+  }
 }
 @media only screen and (min-device-width: 280px) and (max-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
   h1 {
@@ -2239,6 +2242,9 @@ canvas {
   .about-note {
     margin-top: 5rem;
   }
+  .usp-container{
+    padding-block-start: 9rem !important;
+  }
 }
 @media only screen and (min-device-width: 500px) and (max-device-width: 880px) and (-webkit-min-device-pixel-ratio: 2) {
   h1 {
@@ -2260,6 +2266,9 @@ canvas {
   }
   .about-note {
     margin-top: 5rem;
+  }
+  .usp-container{
+    padding-block-start: 9rem !important;
   }
 }
 /* .info-box {
