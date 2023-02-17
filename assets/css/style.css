@@ -2188,9 +2188,6 @@ canvas {
   h2 {
     font-size: 5rem;
   }
-  #director {
-    text-align: center;
-  }
   #about {
     margin-top: 10%;
   }
@@ -2222,10 +2219,6 @@ canvas {
   p {
     font-size: 2rem;
   }
-  #director {
-    text-align: center;
-    padding-inline-start: 4rem;
-  }
   #about {
     margin-top: 10%;
   }
@@ -2250,9 +2243,6 @@ canvas {
 @media only screen and (min-device-width: 500px) and (max-device-width: 880px) and (-webkit-min-device-pixel-ratio: 2) {
   h1 {
     font-size: 5rem;
-  }
-  #director {
-    text-align: center;
   }
   #about {
     margin-top: 10%;
