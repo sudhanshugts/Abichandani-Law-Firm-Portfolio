@@ -602,11 +602,28 @@ function spaceBackground() {
           console.log(doc.scrollLeft);
           console.log(doc.clientLeft);
 
-          that.cursor_x =
-            event.pageX || event.clientX + doc.scrollLeft - doc.clientLeft;
-          that.cursor_y =
-            event.pageY || event.clientY + doc.scrollTop - doc.clientTop;
+          // that.cursor_x =
+          //   event.pageX || event.clientX + doc.scrollLeft - doc.clientLeft;
+          // that.cursor_y =
+          //   event.pageY || event.clientY + doc.scrollTop - doc.clientTop;
 
+          if(event.pageX<744 && event.pageX>654){
+            that.cursor_x =
+            713 + doc.scrollLeft - doc.clientLeft;
+            // console.log("minimum")
+          }else{
+            if(event.pageX<654){
+              that.cursor_x =
+              600
+               + doc.scrollLeft - doc.clientLeft;
+            }else{
+              that.cursor_x =
+              813
+               + doc.scrollLeft - doc.clientLeft;
+            }
+           
+            // console.log("maximum")
+          }
         }
       },
 
