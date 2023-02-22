@@ -10530,3 +10530,34 @@ a:hover {
       font-size: 8rem;
      }
   }
+
+  h3{
+    font-size: 13rem;
+  }
+/* 
+  h1{
+    font-size: 4rem !important;
+  } */
+
+  .contact_link{
+    position: relative !important;
+  }
+  
+  .contact_link::after{
+    content: "" !important;
+    position: absolute !important;
+    top: -10rem !important;
+    left: 0 !important;
+    background-image: url("../images/abstract.jpeg") !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    width: 100% !important;
+    height: 37rem !important;
+    z-index: -3;
+    opacity: 0 !important;
+    transition: all 0.8s;
+  }
+
+  .contact_link:hover::after{
+    opacity: 1 !important;
+  }

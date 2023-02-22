@@ -97,7 +97,7 @@ form.success .icon-button
 {
     position: relative;
     margin: 0 4rem;
-    opacity: 0.15;
+    opacity: 0.6;
     -webkit-transition: .2s ease;
     -o-transition: .2s ease;
     transition: .2s ease;

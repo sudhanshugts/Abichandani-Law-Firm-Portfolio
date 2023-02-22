@@ -69,7 +69,7 @@ html {
 }
 body {
   height: 100%;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-family: D-DIN;
   font-weight: 300;
   font-style: normal;
@@ -110,7 +110,7 @@ h6 {
 }
 
 h1 {
-  font-size: 5rem !important;
+  font-size: 4rem !important;
   line-height: 1.15em;
   font-family: D-DIN;
 }
@@ -1721,6 +1721,7 @@ form .hpc {
   background-repeat: no-repeat;
 }
 
+
 canvas {
   position: fixed;
   width: 100%;
@@ -2319,4 +2320,23 @@ canvas {
   padding: 1rem 1.5rem;
   color: black;
   font-weight: 600;
+}
+
+.about-name-width-27 {
+  flex: 0 0 auto;
+  width: 32%;
+}
+
+.brochure_button{
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  border-radius: 8px;
+  background-color: white;
+  color: black;
+}
+
+.brochure_button:hover{
+  color: black !important;
 }

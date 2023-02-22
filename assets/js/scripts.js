@@ -653,7 +653,7 @@ function lightbox_setup() {
 		+'</div>'
 		+'</div>';
 
-		var customSlideHTML = `<div class="gslide">
+		var customSlideHTML = `<div class="gslide show-desc">
 		<div class="gslide-inner-content">
 			<div class="ginner-container">
 
@@ -855,3 +855,10 @@ function hover_interaction_setup() {
 	});
 
 }
+
+// brocure button on first project...
+// let brochure_button = document.getElementById('brochure_button');
+
+// brochure_button.addEventListener('click',(e)=>{
+//    location.href = "https://drive.google.com/drive/u/4/folders/1DS__x6o2yZ6JJBCJGY3vNFJ4ghyyT6bs";
+// });

@@ -41,20 +41,33 @@
 }
 #spin:after {
   content: "";
-  animation: spin 0.5s linear infinite;
+  animation: spin 2s linear infinite;
 }
 @keyframes spin {
   0% {
     content: "WE";
   }
-  50% {
+  12% {
     content: "PERMANENTLY";
   }
-  70% {
+  24% {
     content: "SEQUESTER";
   }
-  90% {
-    content: "CARBON";
+  36% {
+    content: "CARBON.";
+  }
+
+  48% {
+    content: "WE";
+  }
+  60% {
+    content: "PERMANENTLY";
+  }
+  72% {
+    content: "ENRICH";
+  }
+  100% {
+    content: "SOIL.";
   }
 }
 /* @media screen and (max-width: 500px) {
