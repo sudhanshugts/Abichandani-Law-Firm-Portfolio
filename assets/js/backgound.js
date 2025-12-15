@@ -410,14 +410,14 @@ function spaceBackground() {
         this.star_x_save = 0;
         this.star_y_save = 0;
         this.star_ratio = this.settings.ratio;
-        this.star_speed = this.settings.speed;
-        this.star_speed_save = 0;
+        this.star_speed = this.settings.speed * 4;
+        this.star_speed_save = 4;
         this.star = new Array(this.n);
         this.color = this.settings.starColor;
         this.opacity = 0.1;
 
-        this.cursor_x = 0;
-        this.cursor_y = 0;
+        // this.cursor_x = 0;
+        // this.cursor_y = 0;
         this.mouse_x = 0;
         this.mouse_y = 0;
 
@@ -428,11 +428,11 @@ function spaceBackground() {
 
         this.fps = this.settings.fps;
 
-        this.desktop = !navigator.userAgent.match(
-          /(iPhone|iPod|iPad|Android|BlackBerry|BB10|IEMobile)/
-        );
-        this.orientationSupport = window.DeviceOrientationEvent !== undefined;
-        this.portrait = null;
+        // this.desktop = !navigator.userAgent.match(
+        //   /(iPhone|iPod|iPad|Android|BlackBerry|BB10|IEMobile)/
+        // );
+        // this.orientationSupport = window.DeviceOrientationEvent !== undefined;
+        // this.portrait = null;
 
         var canvasInit = function () {
           that.w = that.$el.width();
@@ -556,7 +556,6 @@ function spaceBackground() {
 
       loop: function () {
         this.anim();
-
         animId = window.requestAnimationFrame(function () {
           that.loop();
         });
@@ -590,41 +589,43 @@ function spaceBackground() {
           }
         }
 
-        function handleMousemove(event) {
-          console.log("mouse-moving2" + JSON.stringify(event));
-          console.log(event.pageX);
-          console.log(event.clientX);
-          console.log(doc.scrollLeft);
-          console.log(doc.clientLeft);
-          console.log("----------");
-          console.log(event.pageY);
-          console.log(event.clientY);
-          console.log(doc.scrollLeft);
-          console.log(doc.clientLeft);
-
-          // that.cursor_x =
-          //   event.pageX || event.clientX + doc.scrollLeft - doc.clientLeft;
-          // that.cursor_y =
-          //   event.pageY || event.clientY + doc.scrollTop - doc.clientTop;
-
-          if(event.pageX<744 && event.pageX>654){
-            that.cursor_x =
-            713 + doc.scrollLeft - doc.clientLeft;
-            // console.log("minimum")
-          }else{
-            if(event.pageX<654){
-              that.cursor_x =
-              600
-               + doc.scrollLeft - doc.clientLeft;
-            }else{
-              that.cursor_x =
-              813
-               + doc.scrollLeft - doc.clientLeft;
-            }
-           
-            // console.log("maximum")
-          }
-        }
+        //   function handleMousemove(event) {
+        //     // console.log("mouse-moving2" + JSON.stringify(event));
+        //     // console.log(typeof event.pageX);
+        //     // console.log(event.clientX);
+        //     // console.log(doc.scrollLeft);
+        //     // console.log(doc.clientLeft);
+        //     // console.log("----------");
+        //     // console.log(event.pageY);
+        //     // console.log(event.clientY);
+        //     // console.log(doc.scrollLeft);
+        //     // console.log(doc.clientLeft);
+        //     // var xValue = event.pageX;
+        //     // var xClient = event.clientX;
+        //     // var yClient = event.clientY;
+        //     // if (event.pageX < 744 && event.pageX > 500 || event.pageY < 500 && event.pageY > 700) {
+        //     //   that.cursor_x =
+        //     //     xValue || xClient + (600 + doc.scrollLeft - doc.clientLeftss);
+        //     //   that.cursor_y =
+        //     //     event.pageY || yClient + (400 + doc.scrollTop - doc.clientTop);
+        //     // }
+        //     // if(event.pageX<744 && event.pageX>654){
+        //     //   that.cursor_x =
+        //     //   800 + doc.scrollLeft - doc.clientLeft;
+        //     //   // console.log("minimum")
+        //     // }else{
+        //     //   if(event.pageX<654){
+        //     //     that.cursor_x =
+        //     //     600
+        //     //      + doc.scrollLeft - doc.clientLeft;
+        //     //   }else{
+        //     //     that.cursor_x =
+        //     //     813
+        //     //      + doc.scrollLeft - doc.clientLeft;
+        //     //   }
+        //     // console.log("maximum")
+        //     //   }
+        //   }
       },
 
       stop: function () {
@@ -800,9 +801,7 @@ function fieldBackground() {
   start();
 }
 
-
 function abstractBackground() {
-
   var MESH = {
     width: 1.4,
     height: 1.6,

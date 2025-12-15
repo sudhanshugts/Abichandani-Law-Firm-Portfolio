@@ -14355,7 +14355,7 @@
   }),
   $(".carousel").on("init", function () {
     var t = $(".item.slick-current").data("id");
-    $(".img-wrapper-inner .img[data-id='" + t + "']").addClass("active");
+    $(".img-wrapper-in  cner .img[data-id='" + t + "']").addClass("active");
   }),
   $(".carousel").on("afterChange", function (t, e, i) {
     var n = $(".item.slick-current").data("id");

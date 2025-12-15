@@ -1,0 +1,24 @@
+.logo-box {
+  padding: 4% 5%;
+  position: fixed;
+}
+.logo {
+  user-select: none;
+  /* width: 100%; */
+  height: 16vh;
+}
+@media only screen and (min-device-width: 500px) and (max-device-width: 880px) and (-webkit-min-device-pixel-ratio: 2) {
+  .logo-div {
+    margin: 4px 0px 0px 1px;
+  }
+}
+@media only screen and (min-device-width: 280px) and (max-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
+  .logo-div {
+    margin: 4px 0px 0px 1px;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .logo-div {
+    margin: 4px 0px 0px 1px; 
+  }
+}

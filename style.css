@@ -45,31 +45,25 @@
 }
 @keyframes spin {
   0% {
-    content: "WE";
+    content: "FLAWLESS";
   }
-  12% {
-    content: "PERMANENTLY";
+  20% {
+    content: "EXECUTION";
   }
-  24% {
-    content: "SEQUESTER";
-  }
-  36% {
-    content: "CARBON.";
-  }
-
-  48% {
-    content: "WE";
+  40% {
+    content: "SEPARATES";
   }
   60% {
-    content: "PERMANENTLY";
+    content: "US";
   }
-  72% {
-    content: "ENRICH";
+  80% {
+    content: "FROM";
   }
   100% {
-    content: "SOIL.";
+    content: "OTHERS";
   }
 }
+
 /* @media screen and (max-width: 500px) {
   .Loader > .inner-loader > .items > ul {
     height: 4rem;
@@ -80,39 +74,30 @@
   }
 } */
 /* Changes */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-    .Loader > .inner-loader > .items > ul {
-      height: 4rem;
-    }
-  
-    .items > ul > li {
-      font-size: 3rem;
-    }
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .Loader > .inner-loader > .items > ul {
+    height: 4rem;
+  }
+
+  .items > ul > li {
+    font-size: 3rem;
+  }
 }
-@media only screen 
-  and (min-device-width: 200px) 
-  and (max-device-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-    .Loader > .inner-loader > .items > ul {
-      height: 2rem;
-    }
-  
-    .items > ul > li {
-      font-size: 2rem;
-    }
+@media only screen and (min-device-width: 200px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .Loader > .inner-loader > .items > ul {
+    height: 2rem;
+  }
+
+  .items > ul > li {
+    font-size: 2rem;
+  }
 }
-@media only screen 
-  and (min-device-width: 500px) 
-  and (max-device-width: 880px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-    .Loader > .inner-loader > .items > ul {
-      height: 4rem;
-    }
-  
-    .items > ul > li {
-      font-size: 4rem;
-    }
+@media only screen and (min-device-width: 500px) and (max-device-width: 880px) and (-webkit-min-device-pixel-ratio: 2) {
+  .Loader > .inner-loader > .items > ul {
+    height: 4rem;
+  }
+
+  .items > ul > li {
+    font-size: 4rem;
+  }
 }

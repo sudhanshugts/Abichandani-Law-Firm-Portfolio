@@ -173,7 +173,7 @@ var option_hero_background_star_background_color = "#000";
  *******************************************************************/
 
 // IMAGE PATH / URL
-var option_hero_background_glitch_image = "assets/images/image.jpg";
+var option_hero_background_glitch_image = "./work/Banni.png";
 
 // OVERLAY OPACITY
 var option_hero_background_glitch_overlay_opacity = "0.4";

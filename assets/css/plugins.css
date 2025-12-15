@@ -42,11 +42,11 @@
 ::before {
   box-sizing: border-box;
 }
-@media (prefers-reduced-motion: no-preference) {
-  :root {
-    scroll-behavior: smooth;
-  }
-}
+/*@media (prefers-reduced-motion: no-preference) {*/
+/*  :root {*/
+/*    scroll-behavior: smooth;*/
+/*  }*/
+/*}*/
 body {
   margin: 0;
   font-family: var(--bs-font-sans-serif);
@@ -5456,7 +5456,7 @@ fieldset:disabled .btn {
   position: relative;
 }
 .carousel.pointer-event {
-  touch-action: pan-y;
+  /*touch-action: pan-y;*/
 }
 .carousel-inner {
   position: relative;
@@ -6714,7 +6714,7 @@ fieldset:disabled .btn {
   text-align: right !important;
 }
 .text-center {
-  text-align: center !important;
+  text-align: center;
 }
 .text-decoration-none {
   text-decoration: none !important;
@@ -6887,6 +6887,9 @@ fieldset:disabled .btn {
   visibility: hidden !important;
 }
 @media (min-width: 576px) {
+  .text-justify {
+    text-align: justify !important;
+  }
   .float-sm-start {
     float: left !important;
   }
@@ -7382,7 +7385,15 @@ fieldset:disabled .btn {
     text-align: center !important;
   }
 }
+@media (min-width: 300px) {
+  .text-justify {
+    text-align: justify !important;
+  }
+}
 @media (min-width: 768px) {
+  .text-justify {
+    text-align: justify !important;
+  }
   .float-md-start {
     float: left !important;
   }
@@ -9367,6 +9378,9 @@ fieldset:disabled .btn {
   }
 }
 @media (min-width: 1200px) {
+  .text-justify {
+    text-align: justify !important;
+  }
   .fs-1 {
     font-size: 2.5rem !important;
   }
@@ -10505,8 +10519,8 @@ fieldset:disabled .btn {
   left: 0;
   z-index: 999999 !important;
   overflow: hidden;
-  -ms-touch-action: none;
-  touch-action: none;
+  /*-ms-touch-action: none;*/
+  /*touch-action: none;*/
   -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -10617,8 +10631,8 @@ fieldset:disabled .btn {
   border: none;
   min-height: 165px;
   -webkit-overflow-scrolling: touch;
-  -ms-touch-action: auto;
-  touch-action: auto;
+  /*-ms-touch-action: auto;*/
+  /*touch-action: auto;*/
 }
 .gslide-image {
   -webkit-box-align: center;
@@ -10641,8 +10655,8 @@ fieldset:disabled .btn {
   height: auto;
   -o-object-fit: cover;
   object-fit: cover;
-  -ms-touch-action: none;
-  touch-action: none;
+  /*-ms-touch-action: none;*/
+  /*touch-action: none;*/
   margin: auto;
   min-width: 200px;
 }

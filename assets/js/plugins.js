@@ -2920,17 +2920,17 @@
         keyCode: !0,
         button: !0,
         buttons: !0,
-        clientX: !0,
-        clientY: !0,
-        offsetX: !0,
-        offsetY: !0,
+        // clientX: !0,
+        // clientY: !0,
+        // offsetX: !0,
+        // offsetY: !0,
         pointerId: !0,
         pointerType: !0,
         screenX: !0,
         screenY: !0,
-        targetTouches: !0,
+        // targetTouches: !0,
         toElement: !0,
-        touches: !0,
+        // touches: !0,
         which: !0,
       },
       S.event.addProp
@@ -17136,135 +17136,135 @@
                       z = document.getElementById("glightbox-slider"),
                       Y = document.querySelector(".goverlay"),
                       q = new N(z, {
-                        touchStart: function (t) {
-                          if (
-                            ((r = !0),
-                            (c(t.targetTouches[0].target, "ginner-container") ||
-                              u(t.targetTouches[0].target, ".gslide-desc") ||
-                              "a" ==
-                                t.targetTouches[0].target.nodeName.toLowerCase()) &&
-                              (r = !1),
-                            u(t.targetTouches[0].target, ".gslide-inline") &&
-                              !c(
-                                t.targetTouches[0].target.parentNode,
-                                "gslide-inline"
-                              ) &&
-                              (r = !1),
-                            r)
-                          ) {
-                            if (
-                              ((P = t.targetTouches[0]),
-                              (O.pageX = t.targetTouches[0].pageX),
-                              (O.pageY = t.targetTouches[0].pageY),
-                              (M = t.targetTouches[0].clientX),
-                              (X = t.targetTouches[0].clientY),
-                              (a = e.activeSlide),
-                              (g = a.querySelector(".gslide-media")),
-                              (n = a.querySelector(".gslide-inline")),
-                              (f = null),
-                              c(g, "gslide-image") &&
-                                (f = g.querySelector("img")),
-                              d(Y, "greset"),
-                              t.pageX > 20 && t.pageX < window.innerWidth - 20)
-                            )
-                              return;
-                            t.preventDefault();
-                          }
-                        },
-                        touchMove: function (s) {
-                          if (r && ((P = s.targetTouches[0]), !b && !S)) {
-                            if (n && n.offsetHeight > o) {
-                              var a = O.pageX - P.pageX;
-                              if (Math.abs(a) <= 13) return !1;
-                            }
-                            p = !0;
-                            var h,
-                              d = s.targetTouches[0].clientX,
-                              c = s.targetTouches[0].clientY,
-                              u = M - d,
-                              m = X - c;
-                            if (
-                              (Math.abs(u) > Math.abs(m)
-                                ? ((L = !1), (I = !0))
-                                : ((I = !1), (L = !0)),
-                              (t = P.pageX - O.pageX),
-                              (E = (100 * t) / l),
-                              (i = P.pageY - O.pageY),
-                              (A = (100 * i) / o),
-                              L &&
-                                f &&
-                                ((h = 1 - Math.abs(i) / o),
-                                (Y.style.opacity = h),
-                                e.settings.touchFollowAxis && (E = 0)),
-                              I &&
-                                ((h = 1 - Math.abs(t) / l),
-                                (g.style.opacity = h),
-                                e.settings.touchFollowAxis && (A = 0)),
-                              !f)
-                            )
-                              return v(g, "translate3d(".concat(E, "%, 0, 0)"));
-                            v(
-                              g,
-                              "translate3d(".concat(E, "%, ").concat(A, "%, 0)")
-                            );
-                          }
-                        },
-                        touchEnd: function () {
-                          if (r) {
-                            if (((p = !1), S || b))
-                              return (k = w), void (C = T);
-                            var t = Math.abs(parseInt(A)),
-                              i = Math.abs(parseInt(E));
-                            if (!(t > 29 && f))
-                              return t < 29 && i < 25
-                                ? (h(Y, "greset"), (Y.style.opacity = 1), D(g))
-                                : void 0;
-                            e.close();
-                          }
-                        },
-                        multipointEnd: function () {
-                          setTimeout(function () {
-                            b = !1;
-                          }, 50);
-                        },
-                        multipointStart: function () {
-                          (b = !0), (m = x || 1);
-                        },
-                        pinch: function (e) {
-                          if (!f || p) return !1;
-                          (b = !0), (f.scaleX = f.scaleY = m * e.zoom);
-                          var t = m * e.zoom;
-                          if (((S = !0), t <= 1))
-                            return (
-                              (S = !1),
-                              (t = 1),
-                              (C = null),
-                              (k = null),
-                              (w = null),
-                              (T = null),
-                              void f.setAttribute("style", "")
-                            );
-                          t > 4.5 && (t = 4.5),
-                            (f.style.transform = "scale3d("
-                              .concat(t, ", ")
-                              .concat(t, ", 1)")),
-                            (x = t);
-                        },
-                        pressMove: function (e) {
-                          if (S && !b) {
-                            var t = P.pageX - O.pageX,
-                              i = P.pageY - O.pageY;
-                            k && (t += k), C && (i += C), (w = t), (T = i);
-                            var n = "translate3d("
-                              .concat(t, "px, ")
-                              .concat(i, "px, 0)");
-                            x &&
-                              (n += " scale3d("
-                                .concat(x, ", ")
-                                .concat(x, ", 1)")),
-                              v(f, n);
-                          }
-                        },
+                        // touchStart: function (t) {
+                        //   if (
+                        //     ((r = !0),
+                        //     (c(t.targetTouches[0].target, "ginner-container") ||
+                        //       u(t.targetTouches[0].target, ".gslide-desc") ||
+                        //       "a" ==
+                        //         t.targetTouches[0].target.nodeName.toLowerCase()) &&
+                        //       (r = !1),
+                        //     u(t.targetTouches[0].target, ".gslide-inline") &&
+                        //       !c(
+                        //         t.targetTouches[0].target.parentNode,
+                        //         "gslide-inline"
+                        //       ) &&
+                        //       (r = !1),
+                        //     r)
+                        //   ) {
+                        //     if (
+                        //       ((P = t.targetTouches[0]),
+                        //       (O.pageX = t.targetTouches[0].pageX),
+                        //       (O.pageY = t.targetTouches[0].pageY),
+                        //       (M = t.targetTouches[0].clientX),
+                        //       (X = t.targetTouches[0].clientY),
+                        //       (a = e.activeSlide),
+                        //       (g = a.querySelector(".gslide-media")),
+                        //       (n = a.querySelector(".gslide-inline")),
+                        //       (f = null),
+                        //       c(g, "gslide-image") &&
+                        //         (f = g.querySelector("img")),
+                        //       d(Y, "greset"),
+                        //       t.pageX > 20 && t.pageX < window.innerWidth - 20)
+                        //     )
+                        //       return;
+                        //     t.preventDefault();
+                        //   }
+                        // },
+                        // touchMove: function (s) {
+                        //   if (r && ((P = s.targetTouches[0]), !b && !S)) {
+                        //     if (n && n.offsetHeight > o) {
+                        //       var a = O.pageX - P.pageX;
+                        //       if (Math.abs(a) <= 13) return !1;
+                        //     }
+                        //     p = !0;
+                        //     var h,
+                        //       d = s.targetTouches[0].clientX,
+                        //       c = s.targetTouches[0].clientY,
+                        //       u = M - d,
+                        //       m = X - c;
+                        //     if (
+                        //       (Math.abs(u) > Math.abs(m)
+                        //         ? ((L = !1), (I = !0))
+                        //         : ((I = !1), (L = !0)),
+                        //       (t = P.pageX - O.pageX),
+                        //       (E = (100 * t) / l),
+                        //       (i = P.pageY - O.pageY),
+                        //       (A = (100 * i) / o),
+                        //       L &&
+                        //         f &&
+                        //         ((h = 1 - Math.abs(i) / o),
+                        //         (Y.style.opacity = h),
+                        //         e.settings.touchFollowAxis && (E = 0)),
+                        //       I &&
+                        //         ((h = 1 - Math.abs(t) / l),
+                        //         (g.style.opacity = h),
+                        //         e.settings.touchFollowAxis && (A = 0)),
+                        //       !f)
+                        //     )
+                        //       return v(g, "translate3d(".concat(E, "%, 0, 0)"));
+                        //     v(
+                        //       g,
+                        //       "translate3d(".concat(E, "%, ").concat(A, "%, 0)")
+                        //     );
+                        //   }
+                        // },
+                        // touchEnd: function () {
+                        //   if (r) {
+                        //     if (((p = !1), S || b))
+                        //       return (k = w), void (C = T);
+                        //     var t = Math.abs(parseInt(A)),
+                        //       i = Math.abs(parseInt(E));
+                        //     if (!(t > 29 && f))
+                        //       return t < 29 && i < 25
+                        //         ? (h(Y, "greset"), (Y.style.opacity = 1), D(g))
+                        //         : void 0;
+                        //     e.close();
+                        //   }
+                        // },
+                        // multipointEnd: function () {
+                        //   setTimeout(function () {
+                        //     b = !1;
+                        //   }, 50);
+                        // },
+                        // multipointStart: function () {
+                        //   (b = !0), (m = x || 1);
+                        // },
+                        // pinch: function (e) {
+                        //   if (!f || p) return !1;
+                        //   (b = !0), (f.scaleX = f.scaleY = m * e.zoom);
+                        //   var t = m * e.zoom;
+                        //   if (((S = !0), t <= 1))
+                        //     return (
+                        //       (S = !1),
+                        //       (t = 1),
+                        //       (C = null),
+                        //       (k = null),
+                        //       (w = null),
+                        //       (T = null),
+                        //       void f.setAttribute("style", "")
+                        //     );
+                        //   t > 4.5 && (t = 4.5),
+                        //     (f.style.transform = "scale3d("
+                        //       .concat(t, ", ")
+                        //       .concat(t, ", 1)")),
+                        //     (x = t);
+                        // },
+                        // pressMove: function (e) {
+                        //   if (S && !b) {
+                        //     var t = P.pageX - O.pageX,
+                        //       i = P.pageY - O.pageY;
+                        //     k && (t += k), C && (i += C), (w = t), (T = i);
+                        //     var n = "translate3d("
+                        //       .concat(t, "px, ")
+                        //       .concat(i, "px, 0)");
+                        //     x &&
+                        //       (n += " scale3d("
+                        //         .concat(x, ", ")
+                        //         .concat(x, ", 1)")),
+                        //       v(f, n);
+                        //   }
+                        // },
                         swipe: function (t) {
                           if (!S)
                             if (b) b = !1;
