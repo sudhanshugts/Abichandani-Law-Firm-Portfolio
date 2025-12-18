@@ -45,22 +45,34 @@
 }
 @keyframes spin {
   0% {
-    content: "FLAWLESS";
+    content: "TRUST";
+  }
+  10% {
+    content: "FAITH";
   }
   20% {
-    content: "EXECUTION";
+    content: "BALANCE";
+  }
+  30% {
+    content: "TRUTH";
   }
   40% {
-    content: "SEPARATES";
+    content: "ORDER";
+  }
+  50% {
+    content: "JUSTICE";
   }
   60% {
-    content: "US";
+    content: "EQUITY";
+  }
+  70% {
+    content: "REASON";
   }
   80% {
-    content: "FROM";
+    content: "FAIRNESS";
   }
   100% {
-    content: "OTHERS";
+    content: "HONOR";
   }
 }
 

@@ -326,6 +326,6 @@ form.success .icon-button
     transition: .2s ease;
 }
 }
-..info-button>.info{
+.info-button>.info{
     font-size: 3rem;
 }
