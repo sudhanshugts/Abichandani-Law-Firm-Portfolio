@@ -30,6 +30,30 @@
     <link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
     <link rel="stylesheet" type="text/css" href="../assets/css/elements.css" />
     <link rel="stylesheet" type="text/css" href="../assets/css/logo.css" />
+
+    <style>
+      .people-list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0px 40px;
+      }
+
+      /* Mobile view */
+      @media (max-width: 600px) {
+        .people-list {
+          grid-template-columns: repeat(2,1fr);
+        }
+      }
+
+      .people-list strong {
+        font-weight: 600;
+      }
+
+      .phone {
+        font-size: 0.9em;
+        color: #cbc3c3;
+      }
+    </style>
   </head>
 
   <body id="body">
@@ -232,27 +256,44 @@
                   </p>
 
                   <p
-                    class="content-animate"
+                    class="content-animate people-list"
                     data-delay="0.2"
                     data-duration="0.6"
                     data-ease="power2.out"
                     data-animation-type="fade_in_from_bottom"
                   >
-                    <strong>Jay:</strong> <span>+91 99099 50001</span><br />
-                    <strong>Manish:</strong> <span>+91 99099 50009</span><br />
-                    <strong>Dharmendra:</strong> <span>+91 99099 50011</span
-                    ><br />
-                    <strong>Jignesh:</strong> <span>+91 98795 47835</span><br />
-                    <strong>Akash:</strong> <span>+91 99099 50004</span><br />
-                    <strong>Sanjay:</strong> <span>+91 93747 92758</span><br />
-                    <strong>Nilesh:</strong> <span>+91 98250 53250</span><br />
-                    <strong>Dhara:</strong> <span>+91 97269 87296</span><br />
-                    <strong>Kinjal:</strong> <span>+91 97127 11027</span><br />
-                    <strong>Bhupatsinh:</strong> <span>+91 94282 21403</span
-                    ><br />
-                    <strong>Savnathsinh:</strong> <span>+91 94288 00731</span
-                    ><br />
-                    <strong>Hitendrasinh:</strong> <span>+91 94282 21401</span>
+                    <span class="person">Jay</span>
+                    <span class="person">Manish</span>
+
+                    <span class="person">
+                      Dharmendra <span class="phone">(+91 99099 50011)</span>
+                    </span>
+
+                    <span class="person">Akash</span>
+                    <span class="person">Bhupatsinh</span>
+                    <span class="person">Savnathsinh</span>
+                    <span class="person">Hitendrasinh</span>
+
+                    <span class="person">Chetan</span>
+                    <span class="person">Dipak</span>
+                    <span class="person">Himani</span>
+                    <span class="person">Hitarth</span>
+                    <span class="person">Krishna</span>
+                    <span class="person">Mohit</span>
+                    <span class="person">Neha</span>
+                    <span class="person">Pushpa</span>
+                    <span class="person">Ronak</span>
+                    <span class="person">Ritupraj</span>
+                    <span class="person">Wahid</span>
+                    <span class="person">Kamil</span>
+                    <span class="person">Smitha</span>
+                    <span class="person">Anjali</span>
+                    <span class="person">Bansan</span>
+                    <span class="person">Nitendras</span>
+                    <span class="person">Ami</span>
+                    <span class="person">Devghana</span>
+                    <span class="person">Yash</span>
+                    <span class="person">Out Station</span>
                   </p>
                 </div>
                 <!-- /COLUMN -->

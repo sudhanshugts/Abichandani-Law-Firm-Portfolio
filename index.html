@@ -1,40 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="./23_Final_Logo_.png" />
     <title>Abichandani Law Firm</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Dharashastri Loader */
+      #dharashastriLoader {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #000;
+        z-index: 9999;
+      }
 
-<body>
+      #dharashastriLoader .logo {
+        color: #fff;
+        font-size: 4vw;
+        font-weight: 900;
+        animation: logoPulse 3s infinite linear;
+      }
+
+      @keyframes logoPulse {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.03);
+        }
+      }
+
+      .bubble {
+        position: absolute;
+        border-radius: 50%;
+        pointer-events: none;
+        background: radial-gradient(circle, #0d2841 0%, #000 90%);
+        animation: bubbleAnim linear forwards;
+        opacity: 0.25;
+      }
+
+      @keyframes bubbleAnim {
+        from {
+          transform: scale(0.2);
+          opacity: 0;
+        }
+        30% {
+          opacity: 0.5;
+        }
+        to {
+          transform: scale(1.8);
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Dharashastri Loader -->
+    <div id="dharashastriLoader">
+      <div class="logo">धाराशास्त्री</div>
+      <audio id="loaderSound" src="sound1.mp3" preload="auto"></audio>
+    </div>
+
+    <!-- Existing website content -->
     <div class="main-home">
-        <div class="Loader">
-            <div class="inner-loader">
-                <div class="items">
-                    <ul>
-                        <li id="spin"></li>
-                        <!-- <li id="spin"></li>
-                        <li id="spin"></li>
-                        <li id="spin"></li> -->
-                        <!-- <li id="spin">We</li>
-                        <li>PERMANENTLY</li>
-                        <li>SEQUESTER</li>
-                        <li>CARBON.</li> -->
-                    </ul>
-                </div>
-            </div>
+      <div class="Loader">
+        <div class="inner-loader">
+          <div class="items">
+            <ul>
+              <li id="spin"></li>
+            </ul>
+          </div>
         </div>
+      </div>
     </div>
 
     <script>
-        setTimeout(function () {
-            window.location.href = "homepage.html";
-        }, 5000); // 12000 milliseconds = 12 seconds (the length of the animation)
-    </script>
-</body>
+      const loader = document.getElementById("dharashastriLoader");
+      const sound = document.getElementById("loaderSound");
+      let bubbleInterval;
+      const audioLoopDuration = 9; // seconds
 
+      // Bubble animation
+      function createBubble() {
+        const bubble = document.createElement("div");
+        bubble.className = "bubble";
+        const size = Math.random() * 120 + 40;
+        bubble.style.width = bubble.style.height = `${size}px`;
+        bubble.style.left = `${Math.random() * window.innerWidth}px`;
+        bubble.style.top = `${Math.random() * window.innerHeight}px`;
+        const duration = Math.random() * 4 + 4;
+        bubble.style.animationDuration = `${duration}s`;
+        loader.appendChild(bubble);
+        setTimeout(() => bubble.remove(), duration * 1000);
+      }
+
+      function startBubbles() {
+        bubbleInterval = setInterval(createBubble, 100);
+      }
+      function stopBubbles() {
+        clearInterval(bubbleInterval);
+      }
+
+      // Play audio with looping
+      function playSound() {
+        sound.volume = 0.3;
+        sound.play().catch(() => {
+          // Autoplay blocked, wait for user interaction
+          const resume = () => {
+            sound.play().catch(() => {});
+            document.removeEventListener("click", resume);
+          };
+          document.addEventListener("click", resume);
+        });
+        sound.addEventListener("timeupdate", () => {
+          if (sound.currentTime >= audioLoopDuration) sound.currentTime = 0;
+        });
+      }
+
+      // Start loader on page load
+      window.addEventListener("load", () => {
+        playSound();
+        startBubbles();
+
+        // Hide loader after 5s
+        setTimeout(() => {
+          stopBubbles();
+          loader.style.display = "none";
+        }, 5000);
+
+        // Redirect after 10s (or adjust if you want)
+        setTimeout(() => {
+          window.location.href = "homepage.html";
+        }, 8000);
+      });
+    </script>
+  </body>
 </html>
