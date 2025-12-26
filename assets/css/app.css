@@ -10548,3 +10548,24 @@ h3 {
     display: inline;
   }
 }
+
+
+/* Default: desktop */
+.mobile-text {
+  display: none;
+}
+
+.desktop-text {
+  display: inline;
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  .mobile-text {
+    display: inline;
+  }
+
+  .desktop-text {
+    display: none;
+  }
+}
