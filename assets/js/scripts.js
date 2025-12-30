@@ -256,10 +256,10 @@ function section_system() {
     if (options.navigation_buttons == false) return;
 
     $("#main").append(
-      '<div class="button-nav next-section change-section-on-click" data-section-change="next"><p>Next Section</p><div class="line"></div>'
+      '<div class="button-nav next-section change-section-on-click" data-section-change="next"><p>Scroll Down</p><div class="line"></div>'
     );
     $("#main").append(
-      '<div class="button-nav prev-section change-section-on-click hide-button" data-section-change="prev"><div class="line"></div><p>Previous Section</p></div>'
+      '<div class="button-nav prev-section change-section-on-click hide-button" data-section-change="prev"><div class="line"></div><p>Scroll Up</p></div>'
     );
   }
 
@@ -626,28 +626,28 @@ function section_system() {
   $(document).ready(() => {
     $(".getName").click((e) => {
       const find = e.target.innerHTML;
-      if (find === "Aakash Shah") {
+      if (find === "Advocates") {
         update_section(3);
         if (find < 0) {
           update_section("prev");
         } else if (find > 0) {
           update_section("next");
         }
-      } else if (find === "Anahita Brahmbhatt") {
+      } else if (find === "Back office assistance") {
         update_section(1);
         if (find < 0) {
           update_section("prev");
         } else if (find > 0) {
           update_section("next");
         }
-      } else if (find === "Vidit Jain") {
+      } else if (find === "Queries") {
         update_section(4);
         if (find < 0) {
           update_section("prev");
         } else if (find > 0) {
           update_section("next");
         }
-      } else if (find === "Sahir Patel") {
+      } else if (find === "Litigation Updates") {
         update_section(2);
         if (find < 0) {
           update_section("prev");
