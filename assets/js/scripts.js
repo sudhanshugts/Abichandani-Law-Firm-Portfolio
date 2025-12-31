@@ -627,14 +627,14 @@ function section_system() {
     $(".getName").click((e) => {
       const find = e.target.innerHTML;
       if (find === "Advocates") {
-        update_section(3);
+        update_section(1);
         if (find < 0) {
           update_section("prev");
         } else if (find > 0) {
           update_section("next");
         }
       } else if (find === "Back office assistance") {
-        update_section(1);
+        update_section(2);
         if (find < 0) {
           update_section("prev");
         } else if (find > 0) {

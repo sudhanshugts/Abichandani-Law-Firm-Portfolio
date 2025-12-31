@@ -25,6 +25,30 @@
       rel="stylesheet"
     />
 
+    <style>
+      .people-list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0px 40px;
+      }
+
+      /* Mobile view */
+      @media (max-width: 600px) {
+        .people-list {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      .people-list strong {
+        font-weight: 600;
+      }
+
+      .phone {
+        font-size: 0.9em;
+        color: #b2a9a9;
+      }
+    </style>
+
     <!-- STYLESHEETS -->
     <link rel="stylesheet" type="text/css" href="../assets/css/plugins.css" />
     <link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
@@ -60,7 +84,7 @@
         <!-- SECTION CONTAINER -->
         <div class="section-container">
           <!-- CONTAINER CENTER Y -->
-          <div class="about-align" style="padding-top: 8rem">
+          <div class="about-align" style="padding-top: 30rem">
             <!-- CONTAINER -->
             <div class="container">
               <!-- ROW -->
@@ -235,14 +259,16 @@
                       data-ease="power2.out"
                       data-animation-type="fade_in_from_bottom"
                     >
-                      <strong>International / Foreign Banks</strong><br />
-                      • Standard Chartered Bank<br />
-                      • Citibank / Citicorp Finance (India) Limited<br />
-                      • HSBC Ltd<br />
-                      • HSBC Invest Direct (India) Ltd<br />
-                      • Deutsche Bank AG<br />
-                      • ABN AMRO Bank (RBS)<br />
-                      • American Express<br /><br />
+                      <span style="font-weight: bold"
+                        >International / Foreign Banks</span
+                      ><br />
+                      Standard Chartered Bank<br />
+                      Citibank / Citicorp Finance (India) Limited<br />
+                      HSBC Ltd<br />
+                      HSBC Invest Direct (India) Ltd<br />
+                      Deutsche Bank AG<br />
+                      ABN AMRO Bank (RBS)<br />
+                      American Express<br /><br />
                     </p>
                     <p
                       class="content-animate"
@@ -251,17 +277,19 @@
                       data-ease="power2.out"
                       data-animation-type="fade_in_from_bottom"
                     >
-                      <strong>Indian / National Banks</strong><br />
-                      • HDFC Bank<br />
-                      • Kotak Mahindra Bank Ltd<br />
-                      • Axis Bank Ltd<br />
-                      • Yes Bank<br />
-                      • RBL Bank Ltd<br />
-                      • GE Money Financial Services Ltd<br />
-                      • Bandhan Bank Limited<br />
-                      • Vijaya Bank<br />
-                      • Bank of Baroda<br />
-                      • Development Credit Bank (DCB Ltd)<br /><br />
+                      <span style="font-weight: bold"
+                        >Indian / National Bankss</span
+                      ><br />
+                      HDFC Bank<br />
+                      Kotak Mahindra Bank Ltd<br />
+                      Axis Bank Ltd<br />
+                      Yes Bank<br />
+                      RBL Bank Ltd<br />
+                      GE Money Financial Services Ltd<br />
+                      Bandhan Bank Limited<br />
+                      Vijaya Bank<br />
+                      Bank of Baroda<br />
+                      Development Credit Bank (DCB Ltd)<br /><br />
                     </p>
                   </div>
                 </div>
@@ -318,67 +346,49 @@
                     Over and above private client's our firm has reputed
                     Corporate client's like
                   </p> -->
-                  <div class="col3style" style="font-size: 2rem">
-                    <p
-                      class="content-animate"
-                      data-delay="0.2"
-                      data-duration="0.6"
-                      data-ease="power2.out"
-                      data-animation-type="fade_in_from_bottom"
-                    >
-                      • GE Capital<br />
-                      • Tata Motors Finance Ltd<br />
-                      • AU Small Finance Bank Limited<br />
-                      • Fullerton India Credit Co. Ltd<br />
-                      • L&T Finance<br />
-                      • Reliance Capital Ltd<br />
-                      • Moneyline Credit Ltd<br />
-                      • Religare Finvest Ltd<br />
-                      • Magma Leasing & Finance Limited<br />
-                      • Cholamandalam Finance Ltd<br />
-                      • Cholamandalam Investment & Finance Co. Ltd<br />
-                      • Bajaj Finance Limited
-                    </p>
+                  <p
+                    class="content-animate people-list"
+                    data-delay="0.2"
+                    data-duration="0.6"
+                    data-ease="power2.out"
+                    data-animation-type="fade_in_from_bottom"
+                  >
+                    <span>GE Capital</span>
+                    <span>Tata Motors Finance Ltd</span>
+                    <span>AU Small Finance Bank Limited</span>
+                    <span>Fullerton India Credit Co. Ltd</span>
+                    <span>L&T Finance</span>
+                    <span>Reliance Capital Ltd</span>
+                    <span>Moneyline Credit Ltd</span>
+                    <span>Religare Finvest Ltd</span>
+                    <span>Magma Leasing & Finance Limited</span>
+                    <span>Cholamandalam Finance Ltd</span>
+                    <span>Cholamandalam Investment & Finance Co. Ltd</span>
+                    <span>Bajaj Finance Limited</span>
 
-                    <p
-                      class="content-animate"
-                      data-delay="0.3"
-                      data-duration="0.6"
-                      data-ease="power2.out"
-                      data-animation-type="fade_in_from_bottom"
-                    >
-                      • Bajaj Housing Finance Limited<br />
-                      • Maruti Countrywide Auto Financial Services Ltd<br />
-                      • HDB Financial Services Ltd<br />
-                      • India Infoline Finance Ltd<br />
-                      • Dewan Housing Finance Corporation Ltd (DHFL)<br />
-                      • Edelweiss Financial Services Ltd<br />
-                      • Electronica Finance Limited<br />
-                      • Shriram City Union Finance Ltd<br />
-                      • Aditya Birla Finance Limited<br />
-                      • CapFloat Financial Services Private Limited<br />
-                      • Ashv Finance Limited<br />
-                      • Bhartiya Fincorp Private Limited
-                    </p>
+                    <span>Bajaj Housing Finance Limited</span>
+                    <span>Maruti Countrywide Auto Financial Services Ltd</span>
+                    <span>HDB Financial Services Ltd</span>
+                    <span>India Infoline Finance Ltd</span>
+                    <span>Dewan Housing Finance Corporation Ltd (DHFL)</span>
+                    <span>Edelweiss Financial Services Ltd</span>
+                    <span>Electronica Finance Limited</span>
+                    <span>Shriram City Union Finance Ltd</span>
+                    <span>Aditya Birla Finance Limited</span>
+                    <span>CapFloat Financial Services Private Limited</span>
+                    <span>Ashv Finance Limited</span>
+                    <span>Bhartiya Fincorp Private Limited</span>
 
-                    <p
-                      class="content-animate"
-                      data-delay="0.4"
-                      data-duration="0.6"
-                      data-ease="power2.out"
-                      data-animation-type="fade_in_from_bottom"
-                    >
-                      • Lendingkart Finance Limited<br />
-                      • Protium Finance Ltd<br />
-                      • Authum Investment & Infrastructure Limited<br />
-                      • Poonawalla Fincorp Limited<br />
-                      • UGRO Capital Limited<br />
-                      • Janalakshmi Financial Service Ltd<br />
-                      • Au Financiers (India) Limited<br />
-                      • Piramal Capital & Housing Finance Limited<br />
-                      • Everest Creditline
-                    </p>
-                  </div>
+                    <span>Lendingkart Finance Limited</span>
+                    <span>Protium Finance Ltd</span>
+                    <span>Authum Investment & Infrastructure Limited</span>
+                    <span>Poonawalla Fincorp Limited</span>
+                    <span>UGRO Capital Limited</span>
+                    <span>Janalakshmi Financial Service Ltd</span>
+                    <span>Au Financiers (India) Limited</span>
+                    <span>Piramal Capital & Housing Finance Limited</span>
+                    <span>Everest Creditline</span>
+                  </p>
                 </div>
                 <!-- /COLUMN -->
 
@@ -418,17 +428,6 @@
                   >
                     Asset Reconstruction Companies (ARCs)
                   </h3>
-                  <!-- <p
-                    class="content-animate name-tag m-b-2"
-                    data-delay="0.5"
-                    data-duration="0.6"
-                    data-ease="power2.out"
-                    data-animation-type="fade_in"
-                    id="director"
-                  >
-                    Over and above private client's our firm has reputed
-                    Corporate client's like
-                  </p> -->
                   <p
                     class="content-animate"
                     data-delay="0.2"
@@ -436,13 +435,12 @@
                     data-ease="power2.out"
                     data-animation-type="fade_in_from_bottom"
                   >
-                    <strong></strong><br />
-                    • Phoenix Asset Reconstruction Company Pvt. Ltd<br />
-                    • Omkara Assets Reconstruction Private Limited<br />
-                    • Pegasus Assets Reconstruction Pvt. Ltd<br />
-                    • Edelweiss Asset Reconstruction Company Limited<br />
-                    • J.C. Flowers Asset Reconstruction Private Limited<br />
-                    • Assets Care & Reconstruction Enterprise Ltd<br /><br />
+                    Phoenix Asset Reconstruction Company Pvt. Ltd<br />
+                    Omkara Assets Reconstruction Private Limited<br />
+                    Pegasus Assets Reconstruction Pvt. Ltd<br />
+                    Edelweiss Asset Reconstruction Company Limited<br />
+                    J.C. Flowers Asset Reconstruction Private Limited<br />
+                    Assets Care & Reconstruction Enterprise Ltd<br /><br />
                   </p>
                 </div>
                 <!-- /COLUMN -->
@@ -461,7 +459,7 @@
       </div>
       <!-- SECTION -->
       <!-- SECTION -->
-      <div class="section" id="anhiLine" data-section-name="Other Corporate">
+      <div class="section" id="anhiLine" data-section-name="Corporate">
         <!-- SECTION CONTAINER -->
         <div class="section-container" id="anahita">
           <!-- CONTAINER CENTER Y -->
@@ -481,7 +479,7 @@
                     data-ease="power2.out"
                     data-animation-type="fade_in_from_right"
                   >
-                    Other Corporate & Financial Entities
+                    Corporate & Financial Entities
                   </h3>
                   <!-- <p
                     class="content-animate name-tag m-b-2"
@@ -501,17 +499,17 @@
                     data-ease="power2.out"
                     data-animation-type="fade_in_from_bottom"
                   >
-                    • Reliance Life Insurance Co. Ltd<br />
-                    • ING Life Insurance Co. Ltd<br />
-                    • Motilal Oswal Securities Ltd<br />
-                    • FPL Technologies (P) Ltd<br />
-                    • GE–SBI Cards<br />
-                    • Secure Debt Management Consultants LLP<br />
-                    • e-Procurement Technologies Ltd<br />
-                    • Procure Genie<br />
-                    • Asian Granito India Ltd<br />
-                    • Bajaj Herbals Private Limited<br />
-                    • Kiran Motors Pvt. Ltd
+                    Reliance Life Insurance Co. Ltd<br />
+                    ING Life Insurance Co. Ltd<br />
+                    Motilal Oswal Securities Ltd<br />
+                    FPL Technologies (P) Ltd<br />
+                    GE–SBI Cards<br />
+                    Secure Debt Management Consultants LLP<br />
+                    e-Procurement Technologies Ltd<br />
+                    Procure Genie<br />
+                    Asian Granito India Ltd<br />
+                    Bajaj Herbals Private Limited<br />
+                    Kiran Motors Pvt. Ltd
                   </p>
                 </div>
                 <!-- /COLUMN -->

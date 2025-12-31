@@ -2797,3 +2797,14 @@ canvas {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+
+
+
+.fadeinbottom {
+  transform: translateY(400px);
+  transition: transform 1.5s ease-out;
+}
+
+.fadeinbottom.active {
+  transform: translateY(0);
+}

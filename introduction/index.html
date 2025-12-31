@@ -56,7 +56,6 @@
         </a>
       </div>
 
-      <!-- SECTION -->
       <div class="section hero" data-section-name="">
         <!-- SECTION CONTAINER -->
         <div class="section-container">
@@ -87,15 +86,7 @@
                     <div class="row align-items-center justify-content-center">
                       <!-- COLUMN -->
                       <div class="col-md-12 intro-para p-5">
-                        <h1
-                          class="content-animate text-justify text-splitt mp-1 whiteV"
-                          data-splitt-text-type="word"
-                          data-delay="0"
-                          data-duration="0.6"
-                          data-ease="power2.out"
-                          data-stagger="0.06"
-                          data-animation-type="fade_in_from_bottom"
-                        >
+                        <h1 class="fadeinbottom">
                           We believe that outstanding things happen when the
                           best minds work together and thats the way we go about
                           <span class="public-sans">serving our clients</span>.
@@ -120,9 +111,28 @@
         </div>
         <!-- /SECTION CONTAINER -->
       </div>
+      <!-- SECTION -->
+
       <!-- MAIN -->
 
       <!-- JAVASCRIPT FILES -->
+      <script>
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+              }
+            });
+          },
+          { threshold: 0.2 }
+        );
+
+        document
+          .querySelectorAll(".fadeinbottom")
+          .forEach((el) => observer.observe(el));
+      </script>
+
       <script src="../assets/js/plugins.js"></script>
       <script src="../config.js"></script>
       <script src="../assets/js/scripts.js"></script>
