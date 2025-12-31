@@ -640,20 +640,6 @@ function section_system() {
         } else if (find > 0) {
           update_section("next");
         }
-      } else if (find === "Queries") {
-        update_section(4);
-        if (find < 0) {
-          update_section("prev");
-        } else if (find > 0) {
-          update_section("next");
-        }
-      } else if (find === "Litigation Updates") {
-        update_section(2);
-        if (find < 0) {
-          update_section("prev");
-        } else if (find > 0) {
-          update_section("next");
-        }
       }
     });
   });

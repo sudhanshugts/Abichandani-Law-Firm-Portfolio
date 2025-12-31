@@ -2776,3 +2776,24 @@ canvas {
   margin: 0% 2%;
   position: fixed;
 }
+
+.col2style {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+}
+
+.col3style {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .col2style {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .col3style {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
