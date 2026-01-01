@@ -8,18 +8,13 @@
     />
     <title>Abichandani Law Firm</title>
     <link rel="icon" type="image/png" href="./LOGO.jpeg" />
-    <!-- <link
-    href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
-    rel="stylesheet" /> -->
     <link rel="stylesheet" type="text/css" href="assets/css/app.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/logo.css" />
   </head>
 
   <body>
     <div class="loading-screen">
-      <div class="line-frame">
-        <!-- <div class="line"></div> -->
-      </div>
+      <div class="line-frame"></div>
       <p>Loading...</p>
     </div>
     <div id="main">
@@ -32,12 +27,21 @@
       </div>
       <div class="info-box">
         <div class="info">
-          <p class="name-tag">
-            <span class="mobile-text">Swipe</span>
-            <span class="desktop-text">Scroll</span>
-          </p>
-          <!-- <div class="line"></div> -->
-          <!-- <p class="name-tag">Select a Section</p> -->
+          <img
+            class="info_img-left"
+            src="./assets/images/bottom/left-arrow.png"
+            alt="left-arrow"
+          />
+          <img
+            class="info_img-book"
+            src="./assets/images/bottom/book.png"
+            alt="book"
+          />
+          <img
+            class="info_img-right"
+            src="./assets/images/bottom/right-arrow.png"
+            alt="right-arrow"
+          />
         </div>
       </div>
       <div class="section">
@@ -47,27 +51,31 @@
               <div class="row justify-content-center">
                 <div class="col-12 text-start">
                   <div class="carousel">
-                    <div class="item text-center">
+                    <div
+                      class="item text-center"
+                      data-carousel-id="introduction"
+                      data-index="0"
+                    >
                       <a href="./introduction/index.html">
                         <h3>Introduction</h3>
                       </a>
                     </div>
-                    <!-- <div class="item text-center" data-id="video">
-                      <a href="./Project/index.html">
-                        <h3>Projects</h3>
-                      </a>
-                    </div> -->
-                    <!-- <div class="item text-center">
-                      <a href="./about/index.html">
-                        <h3>About Us</h3>
-                      </a>
-                    </div> -->
-                    <div class="item text-center" data-id="abstract">
+                    <div
+                      class="item text-center"
+                      data-id="abstract"
+                      data-carousel-id="firm"
+                      data-index="1"
+                    >
                       <a href="./firm/index.html">
                         <h3>Our Firm</h3>
                       </a>
                     </div>
-                    <div class="item text-center" data-id="abstract">
+                    <div
+                      class="item text-center"
+                      data-id="abstract"
+                      data-carousel-id="probono"
+                      data-index="2"
+                    >
                       <a href="./pro-bono-philanthropy/index.html">
                         <h3>
                           Pro Bono <br class="mobile-br" />
@@ -76,18 +84,33 @@
                       </a>
                     </div>
 
-                    <div class="item text-center" data-id="abstract">
+                    <div
+                      class="item text-center"
+                      data-id="abstract"
+                      data-carousel-id="clients"
+                      data-index="3"
+                    >
                       <a href="./clients/index.html">
                         <h3>Our Clients</h3>
                       </a>
                     </div>
-                    <div class="item text-center" data-id="abstract">
+                    <div
+                      class="item text-center"
+                      data-id="abstract"
+                      data-carousel-id="assistance"
+                      data-index="4"
+                    >
                       <a href="./assistance/index.html">
                         <h3>Assistance</h3>
                       </a>
                     </div>
 
-                    <div class="item text-center" data-id="abstract">
+                    <div
+                      class="item text-center"
+                      data-id="abstract"
+                      data-carousel-id="contactus"
+                      data-index="5"
+                    >
                       <a href="./contact/index.html">
                         <h3>Contact Us</h3>
                       </a>
@@ -99,13 +122,56 @@
           </div>
         </div>
       </div>
-      <!-- <div class="lines">
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-    </div> -->
     </div>
+
     <script type="text/javascript" src="assets/js/app.js"></script>
+
+    <script>
+      // Save carousel index when clicking links
+      document.querySelectorAll(".carousel .item a").forEach((link) => {
+        link.addEventListener("click", (e) => {
+          const item = link.closest(".item");
+          const index = item.getAttribute("data-index");
+          sessionStorage.setItem("carouselIndex", index);
+        });
+      });
+
+      // Restore carousel position after Slick initializes
+      $(document).ready(function () {
+        // Wait for Slick to initialize
+        setTimeout(() => {
+          const savedIndex = sessionStorage.getItem("carouselIndex");
+
+          if (savedIndex !== null) {
+            const index = parseInt(savedIndex, 10);
+
+            if (!isNaN(index) && index >= 0) {
+              // Use Slick's goTo method
+              $(".carousel").slick("slickGoTo", index, true);
+            }
+          }
+        }, 500); // Give time for loading animation to complete
+      });
+
+      // Listen for Slick carousel slide events
+      $(".carousel").on("afterChange", function (event, slick, currentSlide) {
+        sessionStorage.setItem("carouselIndex", currentSlide);
+      });
+
+      // Keyboard arrow navigation
+      document.addEventListener("keydown", function (e) {
+        // Check if the pressed key is ArrowLeft or ArrowRight
+        if (e.key === "ArrowLeft" || e.keyCode === 37) {
+          // Left arrow - go to previous slide
+          e.preventDefault();
+          $(".carousel").slick("slickPrev");
+        } else if (e.key === "ArrowRight" || e.keyCode === 39) {
+          // Right arrow - go to next slide
+          e.preventDefault();
+          $(".carousel").slick("slickNext");
+        }
+      });
+      
+    </script>
   </body>
-  <!-- Mirrored from creazione.avanzare.co/asection/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Feb 2023 07:27:31 GMT -->
 </html>
