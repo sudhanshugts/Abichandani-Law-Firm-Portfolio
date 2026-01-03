@@ -47,6 +47,23 @@
         font-size: 0.9em;
         color: #b2a9a9;
       }
+      .people-item {
+        display: block; /* each on new line */
+        position: relative;
+        padding-left: 15px; /* space for point */
+        color: #fff;
+      }
+
+      .people-item::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        top: 1rem;
+        color: #fff;
+        font-weight: 900;
+        font-size: 2rem;
+        line-height: 1;
+      }
     </style>
 
     <!-- STYLESHEETS -->
@@ -84,29 +101,13 @@
         <!-- SECTION CONTAINER -->
         <div class="section-container">
           <!-- CONTAINER CENTER Y -->
-          <div class="about-align" style="padding-top: 15rem">
+          <div class="about-align" style="padding-top: 20rem">
             <!-- CONTAINER -->
             <div class="container">
               <!-- ROW -->
               <div class="row justify-content-center align-items-center">
                 <!-- COLUMN -->
-                <div class="col-10 col-md-5 about-con" id="about">
-                  <p
-                    class="content-animate name-tag m-b-2"
-                    data-delay="0.55"
-                    data-duration="0.6"
-                    data-ease="power2.out"
-                    data-animation-type="fade_in"
-                  >
-                    Our Clients
-                  </p>
-
-                  <!-- <h3 class="content-animate m-b-3" data-delay="0" data-duration="0.6" data-ease="power2.out"
-                  data-animation-type="fade_in_from_right">
-                  <span class="fst-italic">Who</span>
-                  <span class="public-sans">are we?</span>
-                </h3> -->
-
+                <div class="col-10 col-md-12 intro-para">
                   <p
                     class="content-animate"
                     data-delay="0.2"
@@ -114,91 +115,37 @@
                     data-ease="power2.out"
                     data-animation-type="fade_in_from_bottom"
                   >
-                    We work with the world’s most admired Companies & people.
-                    They look to us for genuine insight & fresh thinking on the
-                    sectors & markets they are working in & they want to be sure
-                    we are serving them as cost-effectively as possible.
+                    The Firm has advised and represented clients across various
+                    sectors, including banking, financial services, asset
+                    reconstruction, and corporate entities. The names set out
+                    below are indicative of clients for whom the Firm has acted
+                    or advised in the past, and do not constitute any form of
+                    solicitation or advertisement. Client details are disclosed
+                    only where permitted and based on publicly available or
+                    consented information. manner.
                   </p>
-                </div>
-                <!-- /COLUMN -->
-
-                <!-- COLUMN -->
-                <div class="col-10 about-name-width-27 offset-md-1 about-name">
-                  <!-- ROW -->
-                  <div class="row justify-content-center">
-                    <!-- COLUMN 1 -->
-                    <div
-                      class="col-4 col-md-12 content-animate m-t-4"
-                      data-delay="0.4"
-                      data-duration="0.6"
-                      data-ease="power2.out"
-                      data-animation-type="fade_in_from_right"
-                    >
-                      <h3>
-                        <span class="public-sans getName"
-                          >Standard Chartered</span
-                        >
-                      </h3>
-                      <p class="content-animate name-tag m-b-2">
-                        Banking Partner
-                      </p>
-                    </div>
-                    <!-- /COLUMN -->
-
-                    <!-- COLUMN 2 -->
-                    <div
-                      class="col-4 col-md-12 content-animate m-t-4"
-                      data-delay="0.45"
-                      data-duration="0.6"
-                      data-ease="power2.out"
-                      data-animation-type="fade_in_from_right"
-                    >
-                      <h3>
-                        <span class="public-sans getName">HDFC Bank</span>
-                      </h3>
-                      <p class="content-animate name-tag m-b-2">
-                        Banking Partner
-                      </p>
-                    </div>
-                    <!-- /COLUMN -->
-
-                    <!-- COLUMN 3 -->
-                    <div
-                      class="col-4 col-md-12 content-animate m-t-4"
-                      data-delay="0.5"
-                      data-duration="0.6"
-                      data-ease="power2.out"
-                      data-animation-type="fade_in_from_right"
-                    >
-                      <h3>
-                        <span class="public-sans getName"
-                          >HDB Financial Services</span
-                        >
-                      </h3>
-                      <p class="content-animate name-tag m-b-2">
-                        Financial Services
-                      </p>
-                    </div>
-                    <!-- /COLUMN -->
-
-                    <!-- COLUMN 4 -->
-                    <div
-                      class="col-4 col-md-12 content-animate m-t-4"
-                      data-delay="0.55"
-                      data-duration="0.6"
-                      data-ease="power2.out"
-                      data-animation-type="fade_in_from_right"
-                    >
-                      <h3>
-                        <span class="public-sans getName">Tata Capital</span>
-                      </h3>
-                      <p class="content-animate name-tag m-b-2">
-                        Financial Services
-                      </p>
-                    </div>
-                    <!-- /COLUMN -->
-                  </div>
-                  <!-- /ROW -->
+                  <p
+                    class="content-animate name-tag"
+                    data-delay="0.55"
+                    data-duration="0.6"
+                    data-ease="power2.out"
+                    data-animation-type="fade_in"
+                  >
+                    Disclaimer
+                  </p>
+                  <p
+                    class="content-animate"
+                    data-delay="0.2"
+                    data-duration="0.6"
+                    data-ease="power2.out"
+                    data-animation-type="fade_in_from_bottom"
+                    style="font-family: 'Calibri-Italic'"
+                  >
+                    The above list is provided solely for informational purposes
+                    and does not imply any endorsement, recommendation, or
+                    guarantee of outcomes. The Firm does not advertise or
+                    solicit work in any
+                  </p>
                 </div>
 
                 <!-- /COLUMN -->
@@ -259,17 +206,23 @@
                       data-ease="power2.out"
                       data-animation-type="fade_in_from_bottom"
                     >
-                      <span style="font-weight: bold"
+                      <span class="people-heading"
                         >International / Foreign Banks</span
-                      ><br />
-                      Standard Chartered Bank<br />
-                      Citibank / Citicorp Finance (India) Limited<br />
-                      HSBC Ltd<br />
-                      HSBC Invest Direct (India) Ltd<br />
-                      Deutsche Bank AG<br />
-                      ABN AMRO Bank (RBS)<br />
-                      American Express<br /><br />
+                      >
+
+                      <span class="people-item">Standard Chartered Bank</span>
+                      <span class="people-item"
+                        >Citibank / Citicorp Finance (India) Limited</span
+                      >
+                      <span class="people-item">HSBC Ltd</span>
+                      <span class="people-item"
+                        >HSBC Invest Direct (India) Ltd</span
+                      >
+                      <span class="people-item">Deutsche Bank AG</span>
+                      <span class="people-item">ABN AMRO Bank (RBS)</span>
+                      <span class="people-item">American Express</span>
                     </p>
+
                     <p
                       class="content-animate"
                       data-delay="0.2"
@@ -277,19 +230,24 @@
                       data-ease="power2.out"
                       data-animation-type="fade_in_from_bottom"
                     >
-                      <span style="font-weight: bold"
-                        >Indian / National Bankss</span
-                      ><br />
-                      HDFC Bank<br />
-                      Kotak Mahindra Bank Ltd<br />
-                      Axis Bank Ltd<br />
-                      Yes Bank<br />
-                      RBL Bank Ltd<br />
-                      GE Money Financial Services Ltd<br />
-                      Bandhan Bank Limited<br />
-                      Vijaya Bank<br />
-                      Bank of Baroda<br />
-                      Development Credit Bank (DCB Ltd)<br /><br />
+                      <span class="people-heading"
+                        >Indian / National Banks</span
+                      >
+
+                      <span class="people-item">HDFC Bank</span>
+                      <span class="people-item">Kotak Mahindra Bank Ltd</span>
+                      <span class="people-item">Axis Bank Ltd</span>
+                      <span class="people-item">Yes Bank</span>
+                      <span class="people-item">RBL Bank Ltd</span>
+                      <span class="people-item"
+                        >GE Money Financial Services Ltd</span
+                      >
+                      <span class="people-item">Bandhan Bank Limited</span>
+                      <span class="people-item">Vijaya Bank</span>
+                      <span class="people-item">Bank of Baroda</span>
+                      <span class="people-item"
+                        >Development Credit Bank (DCB Ltd)</span
+                      >
                     </p>
                   </div>
                 </div>
@@ -317,7 +275,7 @@
         <!-- SECTION CONTAINER -->
         <div class="section-container" id="anahita">
           <!-- CONTAINER CENTER Y -->
-          <div class="container-center-y" style="padding-top: 15rem;">
+          <div class="container-center-y" style="padding-top: 15rem">
             <!-- CONTAINER -->
             <div class="container">
               <!-- ROW -->
@@ -353,41 +311,73 @@
                     data-ease="power2.out"
                     data-animation-type="fade_in_from_bottom"
                   >
-                    <span>GE Capital</span>
-                    <span>Tata Motors Finance Ltd</span>
-                    <span>AU Small Finance Bank Limited</span>
-                    <span>Fullerton India Credit Co. Ltd</span>
-                    <span>L&T Finance</span>
-                    <span>Reliance Capital Ltd</span>
-                    <span>Moneyline Credit Ltd</span>
-                    <span>Religare Finvest Ltd</span>
-                    <span>Magma Leasing & Finance Limited</span>
-                    <span>Cholamandalam Finance Ltd</span>
-                    <span>Cholamandalam Investment & Finance Co. Ltd</span>
-                    <span>Bajaj Finance Limited</span>
+                    <span class="people-item">GE Capital</span>
+                    <span class="people-item">Tata Motors Finance Ltd</span>
+                    <span class="people-item"
+                      >AU Small Finance Bank Limited</span
+                    >
+                    <span class="people-item"
+                      >Fullerton India Credit Co. Ltd</span
+                    >
+                    <span class="people-item">L&T Finance</span>
+                    <span class="people-item">Reliance Capital Ltd</span>
+                    <span class="people-item">Moneyline Credit Ltd</span>
+                    <span class="people-item">Religare Finvest Ltd</span>
+                    <span class="people-item"
+                      >Magma Leasing & Finance Limited</span
+                    >
+                    <span class="people-item">Cholamandalam Finance Ltd</span>
+                    <span class="people-item"
+                      >Cholamandalam Investment & Finance Co. Ltd</span
+                    >
+                    <span class="people-item">Bajaj Finance Limited</span>
 
-                    <span>Bajaj Housing Finance Limited</span>
-                    <span>Maruti Countrywide Auto Financial Services Ltd</span>
-                    <span>HDB Financial Services Ltd</span>
-                    <span>India Infoline Finance Ltd</span>
-                    <span>Dewan Housing Finance Corporation Ltd (DHFL)</span>
-                    <span>Edelweiss Financial Services Ltd</span>
-                    <span>Electronica Finance Limited</span>
-                    <span>Shriram City Union Finance Ltd</span>
-                    <span>Aditya Birla Finance Limited</span>
-                    <span>CapFloat Financial Services Private Limited</span>
-                    <span>Ashv Finance Limited</span>
-                    <span>Bhartiya Fincorp Private Limited</span>
+                    <span class="people-item"
+                      >Bajaj Housing Finance Limited</span
+                    >
+                    <span class="people-item"
+                      >Maruti Countrywide Auto Financial Services Ltd</span
+                    >
+                    <span class="people-item">HDB Financial Services Ltd</span>
+                    <span class="people-item">India Infoline Finance Ltd</span>
+                    <span class="people-item"
+                      >Dewan Housing Finance Corporation Ltd (DHFL)</span
+                    >
+                    <span class="people-item"
+                      >Edelweiss Financial Services Ltd</span
+                    >
+                    <span class="people-item">Electronica Finance Limited</span>
+                    <span class="people-item"
+                      >Shriram City Union Finance Ltd</span
+                    >
+                    <span class="people-item"
+                      >Aditya Birla Finance Limited</span
+                    >
+                    <span class="people-item"
+                      >CapFloat Financial Services Private Limited</span
+                    >
+                    <span class="people-item">Ashv Finance Limited</span>
+                    <span class="people-item"
+                      >Bhartiya Fincorp Private Limited</span
+                    >
 
-                    <span>Lendingkart Finance Limited</span>
-                    <span>Protium Finance Ltd</span>
-                    <span>Authum Investment & Infrastructure Limited</span>
-                    <span>Poonawalla Fincorp Limited</span>
-                    <span>UGRO Capital Limited</span>
-                    <span>Janalakshmi Financial Service Ltd</span>
-                    <span>Au Financiers (India) Limited</span>
-                    <span>Piramal Capital & Housing Finance Limited</span>
-                    <span>Everest Creditline</span>
+                    <span class="people-item">Lendingkart Finance Limited</span>
+                    <span class="people-item">Protium Finance Ltd</span>
+                    <span class="people-item"
+                      >Authum Investment & Infrastructure Limited</span
+                    >
+                    <span class="people-item">Poonawalla Fincorp Limited</span>
+                    <span class="people-item">UGRO Capital Limited</span>
+                    <span class="people-item"
+                      >Janalakshmi Financial Service Ltd</span
+                    >
+                    <span class="people-item"
+                      >Au Financiers (India) Limited</span
+                    >
+                    <span class="people-item"
+                      >Piramal Capital & Housing Finance Limited</span
+                    >
+                    <span class="people-item">Everest Creditline</span>
                   </p>
                 </div>
                 <!-- /COLUMN -->
@@ -435,12 +425,24 @@
                     data-ease="power2.out"
                     data-animation-type="fade_in_from_bottom"
                   >
-                    Phoenix Asset Reconstruction Company Pvt. Ltd<br />
-                    Omkara Assets Reconstruction Private Limited<br />
-                    Pegasus Assets Reconstruction Pvt. Ltd<br />
-                    Edelweiss Asset Reconstruction Company Limited<br />
-                    J.C. Flowers Asset Reconstruction Private Limited<br />
-                    Assets Care & Reconstruction Enterprise Ltd<br /><br />
+                    <span class="people-item"
+                      >Phoenix Asset Reconstruction Company Pvt. Ltd</span
+                    >
+                    <span class="people-item"
+                      >Omkara Assets Reconstruction Private Limited</span
+                    >
+                    <span class="people-item"
+                      >Pegasus Assets Reconstruction Pvt. Ltd</span
+                    >
+                    <span class="people-item"
+                      >Edelweiss Asset Reconstruction Company Limited</span
+                    >
+                    <span class="people-item"
+                      >J.C. Flowers Asset Reconstruction Private Limited</span
+                    >
+                    <span class="people-item"
+                      >Assets Care &amp; Reconstruction Enterprise Ltd</span
+                    >
                   </p>
                 </div>
                 <!-- /COLUMN -->
@@ -499,17 +501,27 @@
                     data-ease="power2.out"
                     data-animation-type="fade_in_from_bottom"
                   >
-                    Reliance Life Insurance Co. Ltd<br />
-                    ING Life Insurance Co. Ltd<br />
-                    Motilal Oswal Securities Ltd<br />
-                    FPL Technologies (P) Ltd<br />
-                    GE–SBI Cards<br />
-                    Secure Debt Management Consultants LLP<br />
-                    e-Procurement Technologies Ltd<br />
-                    Procure Genie<br />
-                    Asian Granito India Ltd<br />
-                    Bajaj Herbals Private Limited<br />
-                    Kiran Motors Pvt. Ltd
+                    <span class="people-item"
+                      >Reliance Life Insurance Co. Ltd</span
+                    >
+                    <span class="people-item">ING Life Insurance Co. Ltd</span>
+                    <span class="people-item"
+                      >Motilal Oswal Securities Ltd</span
+                    >
+                    <span class="people-item">FPL Technologies (P) Ltd</span>
+                    <span class="people-item">GE–SBI Cards</span>
+                    <span class="people-item"
+                      >Secure Debt Management Consultants LLP</span
+                    >
+                    <span class="people-item"
+                      >e-Procurement Technologies Ltd</span
+                    >
+                    <span class="people-item">Procure Genie</span>
+                    <span class="people-item">Asian Granito India Ltd</span>
+                    <span class="people-item"
+                      >Bajaj Herbals Private Limited</span
+                    >
+                    <span class="people-item">Kiran Motors Pvt. Ltd</span>
                   </p>
                 </div>
                 <!-- /COLUMN -->

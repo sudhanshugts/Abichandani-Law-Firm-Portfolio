@@ -1,11 +1,31 @@
 @font-face {
-  font-family: D-DIN;
-  src: url(./assets/font/D-DIN.otf);
+  font-family: Calibri-Bold;
+  src: url(./fonts/fonnts.com-Calibri_Bold.otf);
+}
+@font-face {
+  font-family: Calibri;
+  src: url(./fonts/fonnts.com-Calibri.otf);
+}
+@font-face {
+  font-family: Calibri-Light;
+  src: url(./fonts/fonnts.com-Calibri_Light.otf);
+}
+@font-face {
+  font-family: Calibri-Italic;
+  src: url(./fonts/fonnts.com-Calibri_Italic.otf);
+}
+@font-face {
+  font-family: Calibri-Light-Italic;
+  src: url(./fonts/fonnts.com-Calibri_Light_Italic.otf);
+}
+@font-face {
+  font-family: Calibri-Bold-Italic;
+  src: url(./fonts/fonnts.com-Calibri_Bold_Italic.otf);
 }
 * {
   margin: 0;
   padding: 0;
-  font-family: D-DIN;
+  font-family: "Calibri";
 }
 .main-home {
   background-color: black;
@@ -16,7 +36,7 @@
   align-items: center;
 }
 .Loader > .inner-loader > .items {
-  height: 8rem;
+  height: 100vh;
   position: relative;
   top: 0;
 }
@@ -24,20 +44,30 @@
 .Loader > .inner-loader > .items > ul {
   position: relative;
   overflow: hidden;
-  height: 8rem;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .items > ul > li {
   color: white;
   list-style: none;
   text-align: center;
-  font-size: 7rem;
+  font-size: 4rem;
   position: relative;
   top: 0;
   animation: slide 6s infinite;
+  font-weight: 400;
+  font-family: "Calibri";
 }
 #spin {
   color: white;
+}
+@media (max-width: 700px) {
+  .items > ul > li {
+    font-size: 2.7rem;
+  }
 }
 #spin:after {
   content: "";
@@ -85,31 +115,3 @@
     font-size: 3rem;
   }
 } */
-/* Changes */
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
-  .Loader > .inner-loader > .items > ul {
-    height: 4rem;
-  }
-
-  .items > ul > li {
-    font-size: 3rem;
-  }
-}
-@media only screen and (min-device-width: 200px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
-  .Loader > .inner-loader > .items > ul {
-    height: 2rem;
-  }
-
-  .items > ul > li {
-    font-size: 2rem;
-  }
-}
-@media only screen and (min-device-width: 500px) and (max-device-width: 880px) and (-webkit-min-device-pixel-ratio: 2) {
-  .Loader > .inner-loader > .items > ul {
-    height: 4rem;
-  }
-
-  .items > ul > li {
-    font-size: 4rem;
-  }
-}

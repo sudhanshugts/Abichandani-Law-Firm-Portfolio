@@ -8,7 +8,7 @@
     <title>Abichandani Law Firm</title>
     <link rel="stylesheet" href="style.css" />
     <style>
-      /* Dharashastri Loader */ 
+      /* Dharashastri Loader */
       #dharashastriLoader {
         position: fixed;
         inset: 0;
@@ -21,9 +21,14 @@
 
       #dharashastriLoader .logo {
         color: #fff;
-        font-size: 4vw;
-        font-weight: 900;
+        font-size: 4rem;
+        font-weight: 400;
         animation: logoPulse 3s infinite linear;
+      }
+      @media (max-width: 700px) {
+         #dharashastriLoader .logo{
+          font-size: 2.7rem;
+         }
       }
 
       @keyframes logoPulse {
@@ -88,25 +93,25 @@
       const audioLoopDuration = 9; // seconds
 
       // Bubble animation
-      function createBubble() {
-        const bubble = document.createElement("div");
-        bubble.className = "bubble";
-        const size = Math.random() * 120 + 40;
-        bubble.style.width = bubble.style.height = `${size}px`;
-        bubble.style.left = `${Math.random() * window.innerWidth}px`;
-        bubble.style.top = `${Math.random() * window.innerHeight}px`;
-        const duration = Math.random() * 4 + 4;
-        bubble.style.animationDuration = `${duration}s`;
-        loader.appendChild(bubble);
-        setTimeout(() => bubble.remove(), duration * 1000);
-      }
+      // function createBubble() {
+      //   const bubble = document.createElement("div");
+      //   bubble.className = "bubble";
+      //   const size = Math.random() * 120 + 40;
+      //   bubble.style.width = bubble.style.height = `${size}px`;
+      //   bubble.style.left = `${Math.random() * window.innerWidth}px`;
+      //   bubble.style.top = `${Math.random() * window.innerHeight}px`;
+      //   const duration = Math.random() * 4 + 4;
+      //   bubble.style.animationDuration = `${duration}s`;
+      //   loader.appendChild(bubble);
+      //   setTimeout(() => bubble.remove(), duration * 1000);
+      // }
 
-      function startBubbles() {
-        bubbleInterval = setInterval(createBubble, 100);
-      }
-      function stopBubbles() {
-        clearInterval(bubbleInterval);
-      }
+      // function startBubbles() {
+      //   bubbleInterval = setInterval(createBubble, 100);
+      // }
+      // function stopBubbles() {
+      //   clearInterval(bubbleInterval);
+      // }
 
       // Play audio with looping
       function playSound() {
@@ -127,11 +132,9 @@
       // Start loader on page load
       window.addEventListener("load", () => {
         playSound();
-        startBubbles();
 
         // Hide loader after 5s
         setTimeout(() => {
-          stopBubbles();
           loader.style.display = "none";
         }, 5000);
 

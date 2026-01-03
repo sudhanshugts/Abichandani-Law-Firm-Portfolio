@@ -73,14 +73,21 @@
                     <div
                       class="item text-center"
                       data-id="abstract"
-                      data-carousel-id="probono"
+                      data-carousel-id="practicearea"
                       data-index="2"
                     >
-                      <a href="./pro-bono-philanthropy/index.html">
-                        <h3>
-                          Pro Bono <br class="mobile-br" />
-                          & Philanthropy
-                        </h3>
+                      <a href="./practicearea/index.html">
+                        <h3>Practice Areas</h3>
+                      </a>
+                    </div>
+                    <div
+                      class="item text-center"
+                      data-id="abstract"
+                      data-carousel-id="assistance"
+                      data-index="3"
+                    >
+                      <a href="./ourteam/index.html">
+                        <h3>Our Team</h3>
                       </a>
                     </div>
 
@@ -88,20 +95,10 @@
                       class="item text-center"
                       data-id="abstract"
                       data-carousel-id="clients"
-                      data-index="3"
+                      data-index="4"
                     >
                       <a href="./clients/index.html">
                         <h3>Our Clients</h3>
-                      </a>
-                    </div>
-                    <div
-                      class="item text-center"
-                      data-id="abstract"
-                      data-carousel-id="assistance"
-                      data-index="4"
-                    >
-                      <a href="./assistance/index.html">
-                        <h3>Assistance</h3>
                       </a>
                     </div>
 
@@ -113,6 +110,19 @@
                     >
                       <a href="./contact/index.html">
                         <h3>Contact Us</h3>
+                      </a>
+                    </div>
+                    <div
+                      class="item text-center"
+                      data-id="abstract"
+                      data-carousel-id="probono"
+                      data-index="6"
+                    >
+                      <a href="./pro-bono-philanthropy/index.html">
+                        <h3>
+                          Pro Bono <br class="mobile-br" />
+                          & Philanthropy
+                        </h3>
                       </a>
                     </div>
                   </div>
@@ -171,7 +181,15 @@
           $(".carousel").slick("slickNext");
         }
       });
-      
+
+      // Optional: Make on-screen arrows clickable too
+      $(".info_img-left").on("click", function () {
+        $(".carousel").slick("slickPrev");
+      });
+
+      $(".info_img-right").on("click", function () {
+        $(".carousel").slick("slickNext");
+      });
     </script>
   </body>
 </html>

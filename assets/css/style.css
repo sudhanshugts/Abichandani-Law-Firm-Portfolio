@@ -29,10 +29,32 @@
 
 /** 1. TYPOGRAPHY
 *******************************************************************/
+
 @font-face {
-  font-family: D-DIN;
-  src: url(../font/D-DIN.otf);
+  font-family: Calibri-Bold;
+  src: url(../../fonts/fonnts.com-Calibri_Bold.otf);
 }
+@font-face {
+  font-family: Calibri;
+  src: url(../../fonts/fonnts.com-Calibri.otf);
+}
+@font-face {
+  font-family: Calibri-Light;
+  src: url(../../fonts/fonnts.com-Calibri_Light.otf);
+}
+@font-face {
+  font-family: Calibri-Italic;
+  src: url(../../fonts/fonnts.com-Calibri_Italic.otf);
+}
+@font-face {
+  font-family: Calibri-Light-Italic;
+  src: url(../../fonts/fonnts.com-Calibri_Light_Italic.otf);
+}
+@font-face {
+  font-family: Calibri-Bold-Italic;
+  src: url(../../fonts/fonnts.com-Calibri_Bold_Italic.otf);
+}
+
 .getName {
   cursor: pointer;
 }
@@ -127,7 +149,7 @@ html {
 body {
   height: 100%;
   font-size: 1.3rem;
-  font-family: D-DIN;
+  font-family: "Calibri";
   font-weight: 300M;
   font-style: normal;
   overflow-x: hidden;
@@ -150,11 +172,11 @@ h6 {
   margin-top: 0em;
   margin-bottom: 0;
   font-weight: 100;
-  font-family: D-DIN;
+  font-family: "Calibri";
 }
 
 .public-sans {
-  font-family: D-DIN !important;
+  font-family: "Calibri" !important;
   font-weight: 600;
 }
 
@@ -167,14 +189,14 @@ h6 {
 }
 
 .spectral {
-  font-family: "D-DIN" !important;
+  font-family: "Calibri" !important;
   color: #fff;
 }
 
 h1 {
   font-size: 4rem !important;
   line-height: 1.15em;
-  font-family: D-DIN;
+  font-family: "Calibri";
 }
 
 /* @media (max-width: 1030px) {
@@ -190,7 +212,7 @@ h2 {
 
 h3 {
   font-size: 3rem;
-  font-family: D-DIN;
+  font-family: "Calibri";
 }
 
 h4 {
@@ -215,6 +237,9 @@ p {
   margin-bottom: 0.5rem;
   color: #ebeaea;
 }
+p.align-left {
+  text-align: left;
+}
 
 p.xxl {
   font-size: 2.5rem;
@@ -222,7 +247,7 @@ p.xxl {
 }
 
 p.name-tag {
-  font-family: D-DIN !important;
+  font-family: "Calibri" !important;
   font-size: 1.8rem;
   letter-spacing: 0.015em;
   font-weight: 400;
@@ -2797,8 +2822,6 @@ canvas {
     grid-template-columns: repeat(1, 1fr);
   }
 }
-
-
 
 .fadeinbottom {
   transform: translateY(400px);
